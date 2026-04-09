@@ -35,6 +35,7 @@ Here are some things that work well:
 | Skill | What It Does |
 |-------|-------------|
 | `/startup` | Interactive setup wizard — walks you through naming your site, picking colors, and choosing a deployment target |
+| `/orient` | Saves your current session state so the next time you open Claude Code, it picks up where you left off |
 
 ## Customizing Permissions
 

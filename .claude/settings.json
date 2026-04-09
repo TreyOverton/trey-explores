@@ -1,4 +1,17 @@
 {
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f .claude/state/session.md ]; then echo '--- SESSION STATE ---'; cat .claude/state/session.md; echo '--- END SESSION STATE ---'; fi",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  },
   "permissions": {
     "allow": [
       "Bash",
@@ -10,7 +23,8 @@
       "WebFetch",
       "WebSearch",
       "Task",
-      "Skill(startup)"
+      "Skill(startup)",
+      "Skill(orient)"
     ]
   }
 }

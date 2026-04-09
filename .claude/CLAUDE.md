@@ -103,6 +103,7 @@ npx live-server site --port=3000
 | Skill | Purpose |
 |-------|---------|
 | `/startup` | Initial site setup wizard — name, theme, deployment target |
+| `/orient` | Save session state so the next Claude Code session picks up where you left off |
 
 ## Permissions
 
