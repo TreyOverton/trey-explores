@@ -1,2 +1,4 @@
 - [Home](/)
 - [Getting Started](getting-started.md)
+- **DEPLOYMENT**
+- [GitHub Pages](deploy-github-pages.md)
