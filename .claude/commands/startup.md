@@ -146,6 +146,18 @@ Now make all the changes based on the user's answers:
 2. Copy `CA_VERSION.md` into `site/docs/command-architecture/`
 3. Append the sidebar entries from `.tabulakit/modules/command-architecture/sidebar-section.md` to `site/_sidebar.md`
 
+### Assign preview port
+
+Generate a random port between 3100 and 3800 for the local preview server. Read `.tabulakit/config.json` — if it exists and already has a `previewPort`, keep it. Otherwise, pick a new one and write it:
+
+```json
+{
+  "previewPort": 3247
+}
+```
+
+This avoids conflicts when running multiple TabulaKit sites simultaneously. The VS Code extension and preview commands use this port automatically.
+
 ### Update `site/config.js`
 
 Replace the values in `window.TABULAKIT_CONFIG`:
@@ -199,7 +211,7 @@ Files Updated:
   {- removed: ...}
 
 Preview locally:
-  npx live-server site --port=3000
+  npx live-server site --port={previewPort from .tabulakit/config.json}
 ```
 
 Then show the **manual steps** the user still needs to do, based on their deployment target:

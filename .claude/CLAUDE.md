@@ -86,8 +86,10 @@ All deploy automatically on push to `main`. Each requires a one-time manual setu
 
 ### Local Preview
 
+Each site has a preview port stored in `.tabulakit/config.json` (`previewPort` field, range 3100–3800). Use that port:
+
 ```bash
-npx live-server site --port=3000
+npx live-server site --port=<previewPort from .tabulakit/config.json>
 ```
 
 ## Working with This Repo
