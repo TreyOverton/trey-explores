@@ -1,6 +1,6 @@
 # About
 
-This documentation site was built with [TabulaKit](https://github.com/heatherstoneio/tabulakit) — a template for creating documentation sites with zero build step.
+This documentation site was built with [TabulaKit](https://heatherstoneio.github.io/tabulakit/) — a template for creating documentation sites with zero build step.
 
 ## How It Works
 

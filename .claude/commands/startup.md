@@ -200,7 +200,18 @@ Remove for unused targets:
 - Firebase: `firebase.json`, `.firebaserc.template`
 - Netlify: `netlify.toml`
 
-Also remove the deployment guide pages from `site/` for unused targets (`deploy-github-pages.md`, `deploy-firebase.md`, `deploy-netlify.md`) and their entries from `site/_sidebar.md`. Keep only the guide for the chosen target.
+Also remove the deployment guide pages from `site/` for ALL targets (`deploy-github-pages.md`, `deploy-firebase.md`, `deploy-netlify.md`). Deployment instructions are provided inline in the summary below — users don't need separate guide pages on their site.
+
+### Remove help/meta content from user site
+
+TabulaKit help content belongs on the TabulaKit documentation site and in the VS Code extension, NOT in user sites. Automatically remove these files from `site/` if they exist:
+
+- `getting-started.md`
+- `how-do-i.md`
+- `claude-code-setup.md`
+- `case-studies.md`
+
+Also remove any references to these files from `site/_sidebar.md`. The user's site should only contain their own content from the selected template.
 
 ---
 
@@ -243,10 +254,12 @@ Then show the **manual steps** the user still needs to do, based on their deploy
 > 3. Push your changes — the site will deploy automatically
 
 **Firebase:**
-> To go live, follow the steps in `site/deploy-firebase.md`:
-> 1. Create a Firebase project and get your config values
-> 2. Share the config values with me so I can update `auth-config.js`
-> 3. Run `firebase deploy` (I can do this for you)
+> To go live:
+> 1. Create a Firebase project at [console.firebase.google.com](https://console.firebase.google.com)
+> 2. Register a web app and get your config values
+> 3. Share the config values with me so I can update `auth-config.js`
+> 4. Run `firebase deploy` (I can do this for you)
+> If you need more details, visit the [TabulaKit Firebase guide](https://heatherstoneio.github.io/tabulakit/#/deploy-firebase)
 
 **Netlify:**
 > To go live:
@@ -255,7 +268,7 @@ Then show the **manual steps** the user still needs to do, based on their deploy
 > 3. Netlify auto-detects the settings — just click **Deploy**
 
 **Skip:**
-> When you're ready to deploy, check the deployment guides in the sidebar.
+> When you're ready to deploy, just tell me and I'll walk you through it. You can also visit the [TabulaKit deployment guides](https://heatherstoneio.github.io/tabulakit/#/getting-started) for reference.
 
 If a template has `getting_started` text in its manifest, include it after the deployment instructions.
 
@@ -268,4 +281,5 @@ If a template has `getting_started` text in its manifest, include it after the d
 - Keep the whole interaction under 3 minutes — don't over-explain
 - After the wizard, commit the changes with a message like: `feat: configure site via /startup wizard`
 - When telling the user to close their session, be explicit: "Click the **New Session** button (at the top of the Claude Code panel) to start a fresh session. Your settings will take full effect in the new session."
-- The deploy guide files (`deploy-github-pages.md`, `deploy-firebase.md`, `deploy-netlify.md`) and Claude Code setup file (`claude-code-setup.md`) should NOT be overwritten by template content — they are part of the base site infrastructure
+- Help/meta content (getting-started, how-do-i, claude-code-setup, case-studies, deploy guides) is removed from user sites during setup — it lives on the TabulaKit docs site and in the VS Code extension instead
+- Delete the root `CLAUDE.md` breadcrumb file (if it exists) after setup completes — the real project context lives in `.claude/CLAUDE.md`

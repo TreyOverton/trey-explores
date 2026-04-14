@@ -4,10 +4,13 @@
 
 ## Welcome
 
-This is your documentation site, powered by [TabulaKit](https://github.com/heatherstoneio/tabulakit). Edit this page by modifying `site/README.md`.
+This is your documentation site, powered by [TabulaKit](https://heatherstoneio.github.io/tabulakit/).
 
-## Quick Start
+To make changes, just tell Claude Code what you want in plain English:
 
-- **Add a page:** Create a new `.md` file in `site/` and add a link in `site/_sidebar.md`
-- **Change the theme:** Edit `site/config.js`
-- **Ask Claude Code:** Just describe what you want — "add a page about X", "change the color to green"
+- *"Add a new page about our onboarding process"*
+- *"Change the theme color to green"*
+- *"Add a section header called Resources to the sidebar"*
+- *"Help me write documentation about X"*
+
+You can also edit files directly if you prefer — your content lives in markdown files in the `site/` folder.
