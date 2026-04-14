@@ -13,11 +13,30 @@ You are configuring a freshly forked TabulaKit documentation site. Walk the user
 
 ---
 
+## Pre-flight: Orientation
+
+Before asking any questions, orient the user:
+
+> **Welcome to TabulaKit setup!**
+>
+> I'm going to walk you through configuring your documentation site. It takes about 2-3 minutes. I'll ask you a few questions — things like what to name your site, what colors you want, and where to host it.
+>
+> During this setup, I'll be asking for your permission on each step. Once setup is complete, I'll have broader permissions to help you manage your site without all the prompts.
+>
+> Ready? Let's go!
+
+Wait for the user to acknowledge before proceeding.
+
+---
+
 ## Step 1: Site Name & Description
+
+First, check if a site description already exists — the user may have provided one during the initial repo creation (check the root `CLAUDE.md` breadcrumb file or `site/config.js` for a non-default description). If a description is already set, confirm it with the user rather than asking again.
 
 Ask the user:
 - What is the name of your documentation site?
-- Give a one-line description of what this site is for.
+- (If no existing description) Give a one-line description of what this site is for.
+- (If existing description found) I see your description is "{description}" — want to keep that, or change it?
 
 **Defaults:** name = "My Documentation", description = "A documentation site powered by TabulaKit"
 
@@ -172,15 +191,16 @@ If the user chose Firebase with domain or allowlist mode:
 - Set `allowedDomain` (for domain mode) or `allowedEmails` (for allowlist mode)
 - If the user provided Firebase config values, fill in the `firebase` object
 
-### Clean up deployment configs (optional)
+### Clean up deployment configs
 
-If the user chose a specific deployment target, offer to remove the configs for targets they won't use. **Ask before deleting anything.** The files to potentially remove:
+If the user chose a specific deployment target (not "Skip"), automatically remove the configs and guides for targets they didn't choose. **Do not ask — just clean up.** Users pick one deploy target and stick with it.
 
+Remove for unused targets:
 - GitHub Pages: `.github/workflows/deploy.yml`
 - Firebase: `firebase.json`, `.firebaserc.template`
 - Netlify: `netlify.toml`
 
-Also offer to remove the deployment guides from `site/` for unused targets, and their entries from `site/_sidebar.md`.
+Also remove the deployment guide pages from `site/` for unused targets (`deploy-github-pages.md`, `deploy-firebase.md`, `deploy-netlify.md`) and their entries from `site/_sidebar.md`. Keep only the guide for the chosen target.
 
 ---
 
@@ -247,4 +267,5 @@ If a template has `getting_started` text in its manifest, include it after the d
 - If the user seems confused at any step, explain in plain language and offer the default
 - Keep the whole interaction under 3 minutes — don't over-explain
 - After the wizard, commit the changes with a message like: `feat: configure site via /startup wizard`
+- When telling the user to close their session, be explicit: "Type `/exit` in Claude Code to end this session, then start a new one. Your settings will take full effect in the new session."
 - The deploy guide files (`deploy-github-pages.md`, `deploy-firebase.md`, `deploy-netlify.md`) and Claude Code setup file (`claude-code-setup.md`) should NOT be overwritten by template content — they are part of the base site infrastructure

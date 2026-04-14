@@ -15,41 +15,38 @@ Before you start, make sure you have:
 
 Open VS Code, launch Claude Code, and paste this prompt:
 
----
+```text
+I want to create a documentation site using TabulaKit. Here's what I need you to do:
 
-*I want to create a documentation site using TabulaKit. Here's what I need you to do:*
+1. Check if gh (GitHub CLI) is installed. If not, install it.
+2. Check if I'm authenticated with gh auth status. If not, run gh auth login and walk me through it.
+3. Ask me what I want to name my repo and give a one-line description.
+4. Create a new repo from the TabulaKit template by running:
+   gh repo create MY-SITE --template heatherstoneio/tabulakit --public --clone
+   (Replace MY-SITE with my answer from step 3.)
+5. After cloning, cd into the new repo directory.
+6. Write a file at CLAUDE.md (in the repo root, NOT inside .claude/) with this content:
 
-*1. Check if `gh` (GitHub CLI) is installed. If not, install it.*
-*2. Check if I'm authenticated with `gh auth status`. If not, run `gh auth login` and walk me through it.*
-*3. Create a new repo from the TabulaKit template by running:*
-*`gh repo create MY-SITE --template heatherstoneio/tabulakit --public --clone`*
-*(Ask me what I want to name my repo before running this — replace MY-SITE with my answer.)*
-*4. After cloning, `cd` into the new repo directory.*
-*5. Write a file at `CLAUDE.md` (in the repo root, NOT inside .claude/) with this content:*
-
-```
 # Setup Instructions
 
 This is a freshly forked TabulaKit site that hasn't been configured yet.
+Site description: [use the description from step 3]
 
 On the NEXT session (after this one), the .claude/ folder will be active
 with full project context, permissions, and skills.
 
 When the user returns, tell them: "Welcome back! Your TabulaKit repo is
-ready. Type /startup to configure your site — it'll walk you through
-picking a name, template, colors, and deployment target."
+ready. Type /startup to configure your site."
 
 After /startup completes, delete this root CLAUDE.md file — the real
 project context lives in .claude/CLAUDE.md.
+
+7. Commit that file: git add CLAUDE.md && git commit -m "docs: add setup breadcrumb for first session"
+8. Push: git push origin main
+9. Tell me to type /exit to close this Claude Code session, then open a new one in the repo folder so the settings and skills take effect.
+
+If anything fails, explain what went wrong and help me fix it. I may be non-technical.
 ```
-
-*6. Commit that file: `git add CLAUDE.md && git commit -m "docs: add setup breadcrumb for first session"`*
-*7. Push: `git push origin main`*
-*8. Tell me to close this Claude Code session and open a new one in the repo folder so the `.claude/settings.json` and skills take effect.*
-
-*If anything fails, explain what went wrong and help me fix it. I may be non-technical.*
-
----
 
 Claude Code will handle everything — installing tools, authenticating with GitHub, creating your repo, and setting things up. Just answer its questions.
 
