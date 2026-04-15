@@ -1,0 +1,11 @@
+- [Home](/)
+- **COURSE INFO**
+- [Syllabus](syllabus.md)
+- [Schedule](schedule.md)
+- [Pre-Work](pre-work.md)
+- **SESSIONS**
+- [Intro Session](sessions/intro.md)
+- [Workshop](sessions/workshop.md)
+- **RESOURCES**
+- [Resources & Links](resources.md)
+- [Participant Guide](participant-guide.md)
