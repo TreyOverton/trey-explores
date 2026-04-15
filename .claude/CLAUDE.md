@@ -22,7 +22,7 @@ Trey is a senior software architect and CTO. When helping him explore topics:
 - **Cross-link aggressively** — related concepts should link to each other within the text, wiki-style
 - **Knowledge areas grow into subdirectories** — a single page can become an index of sub-documents as the area expands
 - **Status tracking** — concepts are either understood (summarized) or queued for exploration
-- **Exploration queue** — topics to explore later are tracked on a dedicated page (future: GitHub issues)
+- **Exploration queue** — topics to explore are tracked as GitHub issues on `TreyOverton/trey-explores` and summarized on a site page
 - **Provisional beliefs** — intuitions flagged for stress-testing get their own page
 
 ### Site Structure
@@ -46,8 +46,12 @@ site/
 
 1. Create a `.md` file in the appropriate `site/knowledge/<area>/` or `site/creative/` directory
 2. Include cross-links to related concept pages within the content
-3. Add a link in `site/_sidebar.md` under the appropriate section
-4. If the concept was on the exploration queue, remove it from there
+3. Add a link in the appropriate `_sidebar.md` (root or per-directory)
+4. If the concept had a GitHub issue, close it with a link to the new page
+
+### Sidebar Navigation (Nested)
+
+Each knowledge area has its own `_sidebar.md` in its directory. When Docsify loads a page from that directory, it shows the area's sub-navigation instead of the root sidebar. The root `site/_sidebar.md` shows only top-level entries. When adding a new concept page, add it to the area's `_sidebar.md`, not the root.
 
 ### Linking Between Concepts
 
@@ -114,10 +118,34 @@ npx live-server site --port=<previewPort from .tabulakit/config.json>
 - **Commit messages** should be concise and descriptive
 - **Push to `main`** triggers deployment (GitHub Pages and Netlify auto-deploy; Firebase requires `firebase deploy`)
 
+## GitHub Issues & Label System
+
+Exploration topics are tracked as issues on `TreyOverton/trey-explores`. Always use `--repo TreyOverton/trey-explores` with `gh` commands (the default remote points to the upstream TabulaKit template).
+
+### Labels
+
+**Terrain labels** (`terrain: <domain>`) — the knowledge area. Every issue gets at least one. Bridge issues get two.
+
+**Type labels** — `concept` (default), `bridge` (connects two terrains), `tangent` (creative/meta), `historical`
+
+**Status labels** — `next-up` (prioritized), `blocked` (waiting on prerequisite)
+
+See `/chart` skill for full label definitions, issue body template, and conventions.
+
+### Issue Lifecycle
+
+1. Topic identified → create issue via `/chart` conventions
+2. Topic explored in conversation → write site page, close issue with link to page
+3. `/horizon` surveys and refines the backlog periodically
+4. `/path` suggests what to explore next
+
 ## Available Skills
 
 | Skill | Purpose |
 |-------|---------|
+| `/chart` | Create or update GitHub issues for exploration topics — defines label system and issue conventions |
+| `/horizon` | Survey the exploration queue, summarize by terrain, refine stale items, update the queue page |
+| `/path` | Suggest 2-3 promising next topics based on recent activity, dependencies, and provisional beliefs |
 | `/startup` | Initial site setup wizard — name, theme, deployment target |
 | `/orient` | Save session state so the next Claude Code session picks up where you left off |
 | `/publish` | Save and publish changes to the live site |
