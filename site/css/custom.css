@@ -1,23 +1,32 @@
 /**
- * Custom Styles
- *
- * Add your own CSS overrides here. This file loads AFTER tabulakit.css,
- * so your rules automatically take priority.
+ * Custom Styles — Ember Theme
  *
  * This file is yours — it is never modified by TabulaKit updates.
- *
- * Examples:
- *
- *   Change the sidebar background:
- *     :root { --sidebar-background: #1a1a2e; }
- *
- *   Make headings larger:
- *     .markdown-section h1 { font-size: 2em; }
- *
- *   Add a custom font:
- *     @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
- *     body { font-family: 'Inter', sans-serif; }
- *
- *   Hide the search bar:
- *     .search { display: none; }
  */
+
+:root {
+  /* Ember color scheme */
+  --sidebar-background: #2a2019;
+  --base-background-color: #221a12;
+  --theme-color: #f97316;
+  --heading-color: #f97316;
+  --heading-h2-color: #f97316;
+  --theme-color-teal: #fbbf24;
+  --sidebar-nav-link-color--active: #fbbf24;
+  --sidebar-name-color: #fbbf24;
+  --link-color: #fbbf24;
+  --base-color: #ede0d0;
+  --sidebar-nav-link-color: #ede0d0;
+
+  /* Font size */
+  --base-font-size: 20px;
+}
+
+body {
+  background-color: #221a12;
+  color: #ede0d0;
+}
+
+.markdown-section {
+  font-size: 20px;
+}
