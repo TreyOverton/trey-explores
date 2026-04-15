@@ -107,7 +107,20 @@ npx live-server site --port=<previewPort from .tabulakit/config.json>
 | `/startup` | Initial site setup wizard — name, theme, deployment target |
 | `/orient` | Save session state so the next Claude Code session picks up where you left off |
 | `/publish` | Save and publish changes to the live site |
+| `/chart` | Create or update GitHub issues to track documentation topics |
+| `/horizon` | Survey open issues, summarize progress, and refine the backlog |
+| `/path` | Suggest promising next topics to document based on recent activity |
 | `/tabula-update` | Check for and apply the latest TabulaKit template improvements |
+
+### GitHub Issues Integration
+
+The `/chart`, `/horizon`, and `/path` skills work together to track documentation topics as GitHub issues:
+
+1. **`/chart`** — Creates issues with a consistent label system (`area:` for categories, `topic`/`question`/`task` for types, `next-up`/`blocked` for status)
+2. **`/horizon`** — Periodically surveys the backlog, groups by area, flags stale items, and identifies stuck dependency chains
+3. **`/path`** — Suggests what to work on next based on recent activity, dependencies, and quick wins
+
+These skills require the `gh` CLI to be authenticated. They auto-detect the repository from the git remote — no configuration needed.
 
 ## Permissions
 
