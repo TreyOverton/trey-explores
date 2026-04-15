@@ -1,18 +1,27 @@
-# About
+# About This Site
 
-This documentation site was built with [TabulaKit](https://heatherstoneio.github.io/tabulakit/) — a template for creating documentation sites with zero build step.
+This is a personal knowledge wiki — a record of topics explored through extended conversations with AI, captured when understanding solidifies.
 
-## How It Works
+## The Process
 
-- **Docsify** renders markdown files as a single-page application
-- **No build step** — edit markdown, push, and your site updates
-- **Full-text search** built in
-- **Dark theme** with customizable colors
+Exploration happens in long-form conversation, typically with Claude. A topic gets investigated from multiple angles: foundational concepts, connections to other fields, intuitive frameworks, provisional beliefs that need stress-testing. When a concept clicks, a summary gets written here.
 
-## Getting Help
+The conversations also generate tangential threads — story concepts, essay ideas, observations about how learning works. Those get captured too, in their own section.
 
-Need to make changes? Open Claude Code and ask:
+## Why This Format
 
-- "Add a new section about X"
-- "Update the sidebar navigation"
-- "Change the site name"
+Long conversations hit context limits. Important threads get buried. Insights get lost. Externalizing understanding into a wiki solves all three: it persists beyond any single conversation, it creates navigable structure via cross-links, and it produces a shareable artifact.
+
+Each page targets one primary concept with links to related concepts. The sidebar provides top-down navigation; the cross-links provide bottom-up discovery. As knowledge areas grow, they can split into subdirectories without breaking links.
+
+## Principles
+
+- **One concept per page** — keep things discrete and linkable
+- **Cross-link aggressively** — the connections between ideas are the point
+- **Flag what's provisional** — distinguish between "I get this" and "I'm holding this for now"
+- **Track what's next** — the [exploration queue](exploration-queue.md) keeps threads from getting lost
+- **Capture tangents** — creative and personal threads are part of the exploration
+
+## Built With
+
+[TabulaKit](https://heatherstoneio.github.io/tabulakit/) — a Docsify-based documentation template. Edit markdown, push, site updates. No build step.

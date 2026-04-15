@@ -1,2 +1,25 @@
 - [Home](/)
+- **TRACKING**
+- [Exploration Queue](exploration-queue.md)
+- [Provisional Beliefs](provisional-beliefs.md)
+- **KNOWLEDGE AREAS**
+- **Geometry**
+  - [Euclidean Axioms](knowledge/geometry/euclidean-axioms.md)
+  - [Non-Euclidean Geometries](knowledge/geometry/non-euclidean-geometries.md)
+- **Special Relativity**
+  - [SR Overview](knowledge/special-relativity/sr-overview.md)
+  - [The Two Postulates](knowledge/special-relativity/two-postulates.md)
+  - [Inertial Frames](knowledge/special-relativity/inertial-frames.md)
+  - [Speed of Light](knowledge/special-relativity/speed-of-light.md)
+  - [Spacetime](knowledge/special-relativity/spacetime.md)
+  - [Minkowski Spacetime](knowledge/special-relativity/minkowski-spacetime.md)
+  - [Simultaneity](knowledge/special-relativity/simultaneity.md)
+  - [Time Dilation](knowledge/special-relativity/time-dilation.md)
+  - [Length Contraction](knowledge/special-relativity/length-contraction.md)
+  - [Mass-Energy Equivalence](knowledge/special-relativity/mass-energy-equivalence.md)
+  - [Why SR Is "Special"](knowledge/special-relativity/why-sr-is-special.md)
+- **CREATIVE & TANGENTS**
+- [The Outrider](creative/the-outrider.md)
+- [Authority & Authorship](creative/authority-and-authorship.md)
+- **META**
 - [About](about.md)

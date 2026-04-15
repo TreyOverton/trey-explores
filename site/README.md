@@ -1,16 +1,25 @@
 # Trey Explores
 
-Documenting the random knowledge exploration over time, tracking what Trey thinks about
+A personal knowledge base built through exploratory conversation. Topics follow connections organically — one question leads to the next, and understanding accumulates here.
 
-## Welcome
+## How This Works
 
-This is your documentation site, powered by [TabulaKit](https://heatherstoneio.github.io/tabulakit/).
+Topics get explored in conversation with AI. When a concept clicks — when I feel like I genuinely *get it* — a summary gets captured here as a page. Each page targets one primary concept and links to related concepts, building a personal wiki over time.
 
-To make changes, just tell Claude Code what you want in plain English:
+## Current Focus
 
-- *"Add a new page about our onboarding process"*
-- *"Change the theme color to green"*
-- *"Add a section header called Resources to the sidebar"*
-- *"Help me write documentation about X"*
+Working through a path from **geometry** to **General Relativity**, currently mid-[Special Relativity](knowledge/special-relativity/sr-overview.md). Next up: [length contraction](knowledge/special-relativity/length-contraction.md), then the bridge to GR via the Equivalence Principle.
 
-You can also edit files directly if you prefer — your content lives in markdown files in the `site/` folder.
+See the [Exploration Queue](exploration-queue.md) for what's ahead and the [Provisional Beliefs](provisional-beliefs.md) for intuitions flagged for stress-testing.
+
+## Knowledge Areas
+
+**[Geometry](knowledge/geometry/euclidean-axioms.md)** — Euclidean axioms, non-Euclidean geometries, and the path toward Riemannian geometry
+
+**[Special Relativity](knowledge/special-relativity/sr-overview.md)** — the two postulates, spacetime, time dilation, mass-energy equivalence, and the scope boundary with GR
+
+## Creative Threads
+
+**[The Outrider](creative/the-outrider.md)** — hard sci-fi story concept using relativistic passive detection
+
+**[Authority & Authorship](creative/authority-and-authorship.md)** — on expertise, AI, and who gets to write about what

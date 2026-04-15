@@ -1,51 +1,65 @@
-# TabulaKit
+# Trey Explores — Personal Knowledge Wiki
 
-TabulaKit is a documentation site template powered by [Docsify](https://docsify.js.org/). It renders markdown files as a single-page application with zero build step — edit markdown, push, and your site updates automatically.
+This is Trey Overton's personal knowledge base — a living wiki built through exploratory conversations with AI. It uses [TabulaKit](https://heatherstoneio.github.io/tabulakit/) (Docsify-based, zero build step) to render markdown as a single-page app.
 
-## Repository Structure
+## What This Site Is
+
+An "explored knowledge base" — Trey works through topics in conversation, and when he feels he genuinely understands a concept, a summary gets captured here. Topics follow connections organically: geometry axioms led to non-Euclidean geometry, which led to spacetime curvature, which led to Special Relativity. Creative tangents (story concepts, essays) get captured too.
+
+## Trey's Working Style
+
+Trey is a senior software architect and CTO. When helping him explore topics:
+
+- **He declares priors explicitly** — flags intuitions, provisional beliefs, and emotional positions separately from demonstrated knowledge. Don't accept false premises; give calibrated pushback.
+- **He accepts things provisionally** — flags them for later stress-testing and continues building. Don't let unresolved questions block progress, but don't lose the thread either.
+- **He links physics to human behavior** — encourage pattern-finding across domains but don't let it derail the primary subject.
+- **He believes in objective truth** — skeptical of claims that quantities have no ground truth. Engage this seriously.
+- **He provides rich context** — background beliefs, what he knows, what he suspects. Use this to give precisely targeted responses, not generic ones.
+
+## Content Organization Principles
+
+- **One primary concept per page** — each markdown file targets a single idea
+- **Cross-link aggressively** — related concepts should link to each other within the text, wiki-style
+- **Knowledge areas grow into subdirectories** — a single page can become an index of sub-documents as the area expands
+- **Status tracking** — concepts are either understood (summarized) or queued for exploration
+- **Exploration queue** — topics to explore later are tracked on a dedicated page (future: GitHub issues)
+- **Provisional beliefs** — intuitions flagged for stress-testing get their own page
+
+### Site Structure
 
 ```
-tabulakit/
-├── site/                      # All site content lives here
-│   ├── index.html             # Docsify app shell (rarely needs editing)
-│   ├── config.js              # Site name, theme colors, Docsify options
-│   ├── auth-config.js         # Authentication mode and Firebase config
-│   ├── _sidebar.md            # Navigation sidebar
-│   ├── README.md              # Home page content
-│   ├── getting-started.md     # Getting started guide
-│   ├── 404.html               # SPA routing fallback
-│   └── *.md                   # Your documentation pages
-│
-├── .github/workflows/         # GitHub Pages auto-deploy
-├── firebase.json              # Firebase hosting config
-├── .firebaserc.template       # Firebase project ID template
-├── netlify.toml               # Netlify hosting config
-│
-└── .claude/
-    ├── CLAUDE.md              # This file
-    ├── settings.json          # Permissions and hooks
-    └── commands/              # Slash command skills
+site/
+├── README.md                        # Home page — overview and recent activity
+├── exploration-queue.md             # Topics to explore next
+├── provisional-beliefs.md           # Beliefs held for stress-testing
+├── knowledge/
+│   ├── special-relativity/          # SR concepts (one file per concept)
+│   ├── geometry/                    # Geometry concepts
+│   └── general-relativity/         # GR concepts (future)
+├── creative/
+│   ├── the-outrider.md             # Sci-fi story concept
+│   └── authority-and-authorship.md # Essay on AI expertise
+└── about.md                        # About this site and process
 ```
 
-## How to Help the User
+### Adding a New Concept Page
 
-### Adding Content
+1. Create a `.md` file in the appropriate `site/knowledge/<area>/` or `site/creative/` directory
+2. Include cross-links to related concept pages within the content
+3. Add a link in `site/_sidebar.md` under the appropriate section
+4. If the concept was on the exploration queue, remove it from there
 
-1. Create a new `.md` file in `site/`
-2. Add a link to it in `site/_sidebar.md`
-3. That's it — Docsify picks it up automatically
+### Linking Between Concepts
+
+Use standard markdown links with paths relative to `site/`:
+- `[Time Dilation](knowledge/special-relativity/time-dilation.md)` from any page
+- Related concepts should be linked inline where they're mentioned, not just in a "see also" section
+
+## TabulaKit Reference
 
 ### Sidebar Navigation
 
-`site/_sidebar.md` controls the left navigation. Format:
-
-```markdown
-- [Page Title](filename.md)
-- **SECTION HEADER**
-- [Another Page](another.md)
-```
-
-Bold text creates section headers. Indentation creates nested items.
+`site/_sidebar.md` controls the left navigation. Bold text = section headers. Indentation = nested items.
 
 ### Site Configuration
 
