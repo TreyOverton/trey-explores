@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.defaultLocation": "view",
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "workbench.tips.enabled": false,
+    "workbench.startupEditor": "none"
+}

@@ -1,7 +1,5 @@
 # Special Relativity — Overview
 
-**Status:** Understood
-
 Special Relativity is Einstein's 1905 theory describing how space and time behave for observers moving at constant velocity relative to each other. It resolved a fundamental conflict between Newtonian mechanics (which assumed absolute time) and Maxwell's electrodynamics (which predicted a fixed speed of light).
 
 ## What It States

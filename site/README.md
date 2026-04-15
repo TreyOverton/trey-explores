@@ -14,7 +14,7 @@ See the [Exploration Queue](exploration-queue.md) for what's ahead and the [Prov
 
 ## Knowledge Areas
 
-**[Geometry](knowledge/geometry/euclidean-axioms.md)** — Euclidean axioms, non-Euclidean geometries, and the path toward Riemannian geometry
+**[Geometry](knowledge/geometry/geometry-overview.md)** — Euclidean axioms, non-Euclidean geometries, and the path toward Riemannian geometry
 
 **[Special Relativity](knowledge/special-relativity/sr-overview.md)** — the two postulates, spacetime, time dilation, mass-energy equivalence, and the scope boundary with GR
 

@@ -1,7 +1,5 @@
 # Non-Euclidean Geometries
 
-**Status:** Understood
-
 Replace or remove the [parallel postulate](euclidean-axioms.md) and you get geometries that are internally consistent but describe different kinds of space — curved surfaces where straight lines behave unexpectedly.
 
 ## The Three Cases

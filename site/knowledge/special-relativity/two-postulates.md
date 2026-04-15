@@ -1,7 +1,5 @@
 # The Two Postulates of Special Relativity
 
-**Status:** Understood
-
 [Special Relativity](sr-overview.md) is built on exactly two assumptions. Everything else — [time dilation](time-dilation.md), [length contraction](length-contraction.md), [mass-energy equivalence](mass-energy-equivalence.md), [relativity of simultaneity](simultaneity.md) — is a logical consequence of these two postulates.
 
 ## Postulate 1: The Principle of Relativity

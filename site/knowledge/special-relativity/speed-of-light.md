@@ -1,7 +1,5 @@
 # Speed of Light as a Universal Speed Limit
 
-**Status:** Understood
-
 The speed of light (*c* ≈ 299,792,458 m/s) is not just the speed at which light happens to travel — it is a structural constant of spacetime. It is the speed at which all massless particles travel and the upper limit for the speed of any information, causation, or massive object.
 
 ## Why *c* and Not Some Other Speed

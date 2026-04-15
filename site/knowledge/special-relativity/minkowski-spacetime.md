@@ -1,7 +1,5 @@
 # Minkowski Spacetime
 
-**Status:** Understood
-
 Minkowski spacetime is the specific geometric structure of [spacetime](spacetime.md) in [Special Relativity](sr-overview.md) — a flat, four-dimensional space where the geometry is defined by the Minkowski metric. It was formalized by Hermann Minkowski, Einstein's former mathematics professor, in 1907.
 
 ## What Makes It "Minkowski"

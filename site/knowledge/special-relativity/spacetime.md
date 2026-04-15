@@ -1,7 +1,5 @@
 # Spacetime
 
-**Status:** Understood
-
 Spacetime is the unification of three spatial dimensions and one time dimension into a single four-dimensional structure. Events don't happen at a place *and* a time — they happen at a point in spacetime.
 
 ## Why Unification Was Necessary

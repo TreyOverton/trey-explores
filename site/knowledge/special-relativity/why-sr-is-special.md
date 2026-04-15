@@ -1,7 +1,5 @@
 # Why Special Relativity Is "Special"
 
-**Status:** Understood
-
 The "special" in Special Relativity doesn't mean important or unique — it means *restricted*. SR handles the special case of flat [spacetime](spacetime.md) with no gravity. General Relativity handles the general case.
 
 ## The Scope Boundary Is Curvature, Not Speed

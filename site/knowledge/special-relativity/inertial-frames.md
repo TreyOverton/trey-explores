@@ -1,7 +1,5 @@
 # Inertial Frames
 
-**Status:** Understood
-
 An inertial frame is a reference frame in which an object not subject to any net force moves in a straight line at constant speed. Newton's first law holds. No acceleration, no rotation — just uniform motion or rest.
 
 ## Why It Matters

@@ -1,7 +1,5 @@
 # Length Contraction
 
-**Status:** Not yet explored
-
 Moving objects are measured to be shorter along their direction of motion. Like [time dilation](time-dilation.md), this is not an illusion — it's a real geometric effect of [spacetime](spacetime.md).
 
 *This concept is next in the [exploration queue](../../exploration-queue.md). The four-velocity framework from [time dilation](time-dilation.md) should provide the geometric intuition.*

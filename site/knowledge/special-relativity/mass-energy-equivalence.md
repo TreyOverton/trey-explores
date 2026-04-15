@@ -1,7 +1,5 @@
 # Mass-Energy Equivalence (E = mc²)
 
-**Status:** Understood
-
 Mass and energy are the same thing, measured in different units. E = mc² is not a conversion *process* — it's a statement that mass *is* energy, expressed in units that require a conversion factor.
 
 ## Why *c*² Is a Unit Conversion Artifact

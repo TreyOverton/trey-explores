@@ -1,7 +1,5 @@
 # Euclidean Axioms
 
-**Status:** Understood
-
 Euclid's five postulates define the geometry we learn in school — flat-plane geometry where parallel lines never meet, angles of a triangle sum to 180°, and the Pythagorean theorem holds.
 
 ## The Five Postulates

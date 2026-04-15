@@ -1,7 +1,5 @@
 # Time Dilation
 
-**Status:** Understood
-
 Moving clocks run slow. An observer watching a clock in motion relative to them will measure that clock ticking more slowly than their own. This is not an illusion or mechanical effect — it is a geometric fact about [spacetime](spacetime.md).
 
 ## The Four-Velocity Insight

@@ -1,7 +1,5 @@
 # Simultaneity Is Relative
 
-**Status:** Understood (with reservations)
-
 Two events that are simultaneous in one [inertial frame](inertial-frames.md) are not necessarily simultaneous in another. This isn't a measurement error or a practical limitation — according to [Special Relativity](sr-overview.md), there is no frame-independent fact about whether two spatially separated events happen "at the same time."
 
 ## How It Works
